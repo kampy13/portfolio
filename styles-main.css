@@ -1,0 +1,185 @@
+/* Global Styling */
+body {
+    background-color: #2E2E2E; /* Dark gray background */
+    color: #E0E0E0; /* Light text color for readability */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2 {
+    color: #C0C0C0; /* Silver color for headings */
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-top: 20px;
+  }
+  
+  /* Navigation Styling */
+  nav {
+    background-color: #3A3A3A;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: #7FB3D5; /* Light blue for links */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #AED6F1;
+  }
+  
+  /* Section Styling */
+  section {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #D0D0D0;
+    text-align: center;
+  }
+  
+  /* Portfolio Items */
+  .portfolio-item {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    padding: 10px;
+    background-color: #3A3A3A;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .portfolio-item img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .portfolio-item p {
+    margin-top: 10px;
+    color: #C0C0C0;
+    font-weight: bold;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .portfolio-item {
+      width: 100%;
+    }
+  }
+  
+.mtns{
+    max-width: 600px;
+    max-height: 600px;
+    margin: 0 auto;
+    display: block;
+}
+
+.caption{
+    text-align: center;
+}
+
+/* Contact Section Styling */
+#contact {
+    background-color: #3A3A3A;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #E0E0E0;
+    text-align: center;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contact input, #contact textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #2E2E2E;
+}
+
+#contact input::placeholder, #contact textarea::placeholder {
+    color: #A0A0A0;
+}
+/* Removed styling for the new button */
+#contact button, .contact-top {
+    padding: 10px 20px;
+    background-color: #7FB3D5;
+    color: #2E2E2E;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover, .contact-top:hover {
+    background-color: #AED6F1;
+}
+
+.submit-top{
+    padding: 10px 20px;
+    background-color: #7FB3D5;
+    color: #2E2E2E;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 15px auto 0;
+}
+
+.profile-pic{
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
