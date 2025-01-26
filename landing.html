@@ -4,24 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Echo Summit Digital - Landing</title>
-  <meta name="description" content="Echo Summit Digital is a web development company that specializes in creating custom websites for small businesses.">
-  <link rel="canonical" href="https://echosummitdigital.com/index.html">
+  <title>Code Scrolling Effect</title>
+  
+  
 </head>
 <body>
-  <header>
-    <a href="main.html" class="logo">
-      <img src="images/esd_final_webp.webp" alt="Echo Summit Digital Logo">
-    </a>
-  </header>
-
-  <main>
-    <h1>Echo Summit Digital</h1>
-    <button class="button" onclick="window.location.href='main.html'">Enter Site</button>
-    <div id="code-box"></div>
-  </main>
-
-  <script async>
+  <h1>Kevin Lewis Development Services</h1>
+  <button class="button"  onclick="window.location.href='main.html'">Enter Site</button>
+  <div id="code-box"></div>
+  
+  <script>
     const codeBox = document.getElementById("code-box");
     const codeLines = [
       "function helloWorld() {",
@@ -34,7 +26,7 @@
       "}",
       "const data = {",
       "  name: 'Kevin',",
-      "  robot: 'R2-D2',",
+      "  age: 28,",
       "  occupation: 'Developer'",
       "};",
       "// End of script",
@@ -42,6 +34,35 @@
       "import React from 'react';",
       "import { useState } from 'react';",
       "const greet = (name) => {",
+      "  return `Hello, ${name}!`;",
+      "};",
+      "const result = greet('Alice');",
+      "console.log(result);",
+      "function calculateSum(a, b) {",
+      "  return a + b;",
+      "}",
+      "const numbers = [1, 2, 3, 4, 5];",
+      "const total = numbers.reduce((a, b) => a + b, 0);",
+      "console.log(total);",
+      "if (total > 10) {",
+      "  console.log('Total is greater than 10');",
+      "} else {",
+      "  console.log('Total is 10 or less');",
+      "}",
+      "// Loop through array",
+      "for (const num of numbers) {",
+      "  console.log(num);",
+      "}",
+      "const greetEveryone = () => {",
+      "  numbers.forEach(num => console.log(`Hi ${num}`));",
+      "};",
+      "greetEveryone();",
+      "function getRandomInt(max) {",
+      "  return Math.floor(Math.random() * max);",
+      "}",
+      "let randomNumber = getRandomInt(100);",
+      "console.log('Random number:', randomNumber);",
+      "// Script end",
     ];
 
     let lineIndex = 0;
@@ -51,7 +72,7 @@
         newLine.className = "code-line";
         newLine.textContent = codeLines[lineIndex];
         codeBox.appendChild(newLine);
-
+        
         // Force reflow for transition
         setTimeout(() => {
           newLine.classList.add("visible");

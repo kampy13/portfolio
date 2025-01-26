@@ -1,185 +1,313 @@
 /* Global Styling */
 body {
-    background-color: #2E2E2E; /* Dark gray background */
-    color: #E0E0E0; /* Light text color for readability */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  h1, h2 {
-    color: #C0C0C0; /* Silver color for headings */
-    text-align: center;
-  }
-  
-  h1 {
-    font-size: 2.5em;
-    margin-top: 20px;
-  }
-  
-  /* Navigation Styling */
-  nav {
-    background-color: #3A3A3A;
-    padding: 10px;
-  }
-  
+  background-color: #2E2E2E; /* Dark gray background */
+  color: #E0E0E0; /* Light text color for readability */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  color: #C0C0C0; /* Silver color for headings */
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-top: 20px;
+}
+
+/* Navigation Styling */
+nav {
+  background-color: #3A3A3A;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #7FB3D5; /* Light blue for links */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #AED6F1;
+}
+
+/* Section Styling */
+section {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #D0D0D0;
+  text-align: center;
+}
+/* Portfolio Items */
+.portfolio-item {
+flex: 0 1 calc(33.333% - 20px); /* Ensure three items per row */
+padding: 10px;
+background-color: #3A3A3A;
+border-radius: 8px;
+text-align: center;
+box-sizing: border-box;
+display: flex; /* Flexbox for aligning content inside the block */
+flex-direction: column; /* Stack content vertically */
+justify-content: space-between; /* Space out the image and text */
+}
+
+/* Image Wrapper */
+.portfolio-item .image-wrapper {
+width: 100%;
+height: 200px; /* Fixed height to ensure consistency */
+overflow: hidden; /* Ensures any overflow is clipped */
+border-radius: 8px;
+background-color: #000; /* Optional: background color for empty space */
+}
+
+/* Images in Portfolio Items */
+.portfolio-item img {
+width: 100%;
+height: 100%;
+object-fit: cover; /* Ensures the image fills the area */
+}
+
+/* Text in Portfolio Items */
+.portfolio-item p {
+margin-top: 10px;
+color: #C0C0C0;
+font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  nav ul li {
-    margin: 0 15px;
-  }
-  
-  nav ul li a {
-    color: #7FB3D5; /* Light blue for links */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
-    transition: color 0.3s ease;
-  }
-  
-  nav ul li a:hover {
-    color: #AED6F1;
-  }
-  
-  /* Section Styling */
-  section {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-  
-  section p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #D0D0D0;
-    text-align: center;
-  }
-  
-  /* Portfolio Items */
+
   .portfolio-item {
-    display: inline-block;
-    width: 30%;
-    margin: 10px;
-    padding: 10px;
-    background-color: #3A3A3A;
-    border-radius: 8px;
-    text-align: center;
-  }
-  
-  .portfolio-item img {
     width: 100%;
-    border-radius: 8px;
   }
-  
-  .portfolio-item p {
-    margin-top: 10px;
-    color: #C0C0C0;
-    font-weight: bold;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    nav ul {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .portfolio-item {
-      width: 100%;
-    }
-  }
-  
+}
+
 .mtns{
-    max-width: 600px;
-    max-height: 600px;
-    margin: 0 auto;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .caption{
-    text-align: center;
+  text-align: center;
 }
 
 /* Contact Section Styling */
+/* Center the contact section */
+#contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+/* Contact form styling */
 #contact {
-    background-color: #3A3A3A;
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: 40px auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #c4bcba; /* Light background */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between form elements */
 }
 
-#contact h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #E0E0E0;
-    text-align: center;
+/* Labels */
+#contact label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
 }
 
-#contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+/* Input and Textarea Fields */
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-#contact input, #contact textarea {
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    font-size: 1em;
-    color: #2E2E2E;
+/* Focus effect for input fields */
+#contact input[type="text"]:focus,
+#contact input[type="email"]:focus,
+#contact textarea:focus {
+  border-color: #7FB3D5;
+  outline: none;
+  box-shadow: 0 0 5px rgba(127, 179, 213, 0.5);
 }
 
-#contact input::placeholder, #contact textarea::placeholder {
-    color: #A0A0A0;
-}
-/* Removed styling for the new button */
-#contact button, .contact-top {
-    padding: 10px 20px;
-    background-color: #7FB3D5;
-    color: #2E2E2E;
-    border: none;
-    border-radius: 4px;
-    font-size: 1.1em;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+/* Textarea should match input height */
+#contact textarea {
+  min-height: 120px; /* Uniform height for textarea */
+  resize: vertical; /* Allow resizing only vertically */
 }
 
-#contact button:hover, .contact-top:hover {
-    background-color: #AED6F1;
+/* Submit Button */
+#submit-button {
+  padding: 10px 20px;
+  background-color: #7FB3D5;
+  color: #2E2E2E;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  align-self: center; /* Center the button */
+}
+
+#submit-button:hover {
+  background-color: #B0B3B8;
+  box-shadow: 0 6px 10px rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* END Styling for content FORM */
+
+#contact-parent {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+#contact-me-btn, .contact-top {
+  padding: 10px 20px;
+  background-color: #7FB3D5;
+  color: #2E2E2E;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+
+#contact-me-btn:hover {
+background-color: #B0B3B8; /* Slightly lighter silver on hover */
+box-shadow: 0 6px 10px rgba(255, 255, 255, 0.5);
+transform: translateY(-2px);
 }
 
 .submit-top{
-    padding: 10px 20px;
-    background-color: #7FB3D5;
-    color: #2E2E2E;
-    border: none;
-    border-radius: 4px;
-    font-size: 1.1em;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: block;
-    margin: 15px auto 0;
+  padding: 10px 20px;
+  background-color: #7FB3D5;
+  color: #2E2E2E;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 15px auto 0;
 }
 
 .profile-pic{
-    max-width: 200px;
-    max-height: 200px;
-    border-radius: 50%;
-    display: block;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+#submit-button {
+padding: 10px 20px;
+background-color: #7FB3D5;
+color: #2E2E2E;
+border: none;
+border-radius: 4px;
+font-size: 1.1em;
+font-weight: bold;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+#submit-button:hover {
+background-color: #B0B3B8; /* Slightly lighter silver on hover */
+box-shadow: 0 6px 10px rgba(255, 255, 255, 0.5);
+transform: translateY(-2px);}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Ensure vertical centering */
+  margin-top: 50px;
+}
+
+.logo img {
+  max-height: 350px;
+  max-width: 450px;
+  height: auto; /* Maintain aspect ratio */
+  width: auto; /* Maintain aspect ratio */
+}
+
+
+
+/* Responsive Design: Mobile Menu */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    display: none; /* Hide the menu by default */
+  }
+
+  nav ul.active {
+    display: flex; /* Show menu when toggled */
+  }
+
+  nav ul li {
+    margin: 10px 0; /* Space between vertical items */
+  }
+
+  /* Hamburger Menu Icon */
+  .menu-toggle {
+    display: block; /* Show the menu toggle button */
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
     margin: 0 auto;
+  }
 }
