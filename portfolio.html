@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echo Summit Digital-- Home</title>
+    <link rel="stylesheet" href="styles-main.css">
+</head>
+<body>
+  <header>
+    <a href="#top" class="logo">
+      <img src="images/esd_final_webp.webp" alt="Echo Summit Digital Logo">
+    </a>
+  </header>
+  
+
+        <script>
+          function toggleMenu() {
+            const navList = document.getElementById("nav-list");
+            navList.classList.toggle("active");
+          }
+        </script>
+<body>
+    <h1>Echo Summit Digital</h1>
+</body>
+</html>
+<nav>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <ul id="nav-list">
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Services</a></li>
+    <li><a href="#portfolio">Contact</a></li>
+  </ul>
+</nav>
+</nav>
+<section id="image-section">
+    <h2>Home</h2>
+    <div class="image-container">
+        <img class="mtns" src="images/mtns.jpg" alt="Featured Image">
+    </div>
+    <div id="contact-parent">
+        <a href="#contact">
+            <button id="contact-me-btn">Contact Me!</button>
+          </a>
+        </div>
+    
+</section>
+<section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio-container">
+        <div class="portfolio-item">
+            <img src="images/mudded.png" alt="Project Image 1">
+            <p>Mud Ophanim Ceramics</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="images/moon_cs.png" alt="Project Image 2">
+            <p>Coming Soon Page</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="images/pp.png" alt="Project Image 3">
+            <p>Peter's Pretzels</p>
+
+          </div>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <img class="profile-pic" src="images/Kevin-suit-3.png" alt="Profile Picture">
+    <h3>Kevin Lewis, Founder</h3>
+    <p>Hello! My name is Kevin Lewis and I am a professional freelance web developer and founder of Echo Summit Digital. 
+      I really enjoy working with clients to bring their visions to life.
+      I specialize in lightning-fast development and responsive design.
+      I get deep satisfaction from creating sites that are both beautiful and functional.
+      I have worked in a variety of industries including tech, finance, and politics.
+      I decided to start my own business to gain flexibility and control over my work.
+       In my spare time I enjoy climbing, exploring far-flung destinations, and spending time with my family.
+    </p>
+   
+    </form>
+</section>
+<section id="contact-section">
+    <form id="contact" action="https://hooks.zapier.com/hooks/catch/21276218/2zw8022/" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      
+      <button type="submit" id="submit-button">Submit</button>
+    </form>
+  </section>
+  
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const form = event.target;
+  
+      fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+      })
+        .then(() => {
+          alert("Thank you! Your message has been sent.");
+          form.reset(); // Clear the form
+        })
+        .catch(() => {
+          alert("An error occurred. Please try again.");
+        });
+    });
+  </script>
